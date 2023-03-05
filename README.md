@@ -105,6 +105,17 @@ Proves i exercicis a fer i entregar
 
 1. Reprodueix l'exemple fent servir diferents freqüències per la sinusoide. Al menys considera $f_x = 4$ kHz, a banda d'una
     freqüència pròpia en el marge audible. Comenta els resultats.
+    ```python
+        fx1=500
+        fx2=1100
+        x1=A*np.cos(2* pi * fx1 *t)
+        x2=A*np.cos(2* pi * fx2 *t)
+        sf.write('so_500Hz.wav', x1, fm)
+        sf.write('so_1100Hz.wav', x2, fm)
+
+    ```
+    <img src="Figure_0.png" width="480" align="center">
+    <img src="Figure_1.png" width="480" align="center">
 
 2. Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).
