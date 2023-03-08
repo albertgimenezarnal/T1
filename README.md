@@ -121,17 +121,18 @@ Proves i exercicis a fer i entregar
     (`x_r, fm = sf.read('nom_fitxer.wav')`).
 
     - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.
-
+<img src="Figure_3.png" width="480" align="center">
     - Explica el resultat del apartat anterior.
 
 3. Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
     $0$ a $f_m/2$ en Hz.
 
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.
-
+<img src="Figure_4.png" width="480" align="center">
     - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada?
       Comprova-ho amb el senyal generat.
 
+        L'amplitud del senyal no es pot identificar donat que hem divit el senyal pel seu màxim, està normalitzat. El punt màxim del senyal es troba quan XdB=0, i el senyal val 1 (valor normalitzat al màxim).
 > NOTES:
 >
 > - Per representar en dB has de fer servir la fórmula següent:
@@ -150,7 +151,14 @@ Proves i exercicis a fer i entregar
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $f_m\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?
+```python
+    x, fm = sf.read('luzbel44.wav')
+    x.size
+    print(fm)
 
+
+```
+<img src="Figure_5.png" width="480" align="center">
 
 Entrega
 -------
